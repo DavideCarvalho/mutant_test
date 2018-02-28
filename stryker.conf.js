@@ -1,17 +1,17 @@
 module.exports = function(config) {
   config.set({
     files: [
+      "src/**/__tests__/*.js",
       {
         pattern: "src/**/*.js",
         mutated: true,
         included: false
-      },
-      "test/**/*.js"
+      }
     ],
     testRunner: "jest",
     mutator: "javascript",
     transpilers: [],
     reporter: ["html", "clear-text", "progress"],
-    coverageAnalysis: "all"
+    coverageAnalysis: "off"
   });
 };
